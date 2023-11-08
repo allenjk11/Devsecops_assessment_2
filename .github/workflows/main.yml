@@ -1,0 +1,16 @@
+name: DevSecOps2
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  JavaCodeSecretScanning:
+    runs-on: ubuntu-latest
+    steps:
+    - shell: bash
+      env: 
+       SUPER_SECRET: ${{env.CODE_LOC}}
+      run: |
+       echo "$env:SUPER_SECRET"
