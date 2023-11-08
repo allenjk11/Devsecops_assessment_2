@@ -13,4 +13,4 @@ jobs:
       env: 
        SUPER_SECRET: ${{env.CODE_LOC}}
       run: |
-       echo "$env:SUPER_SECRET"
+       echo "$SUPER_SECRET"
